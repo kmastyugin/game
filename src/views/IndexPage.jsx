@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react'
 import PlayersInput from "../actualComponents/Players"
 import SetPlayersInput from "../actualComponents/SetPlayers"
 import Game from "../actualComponents/Game"
-import axios from "axios"
-import { useParams } from "react-router-dom"
-import { useNavigate } from 'react-router-dom';
 
 const Main = () => {
     // Количество игроков
@@ -37,9 +34,7 @@ const Main = () => {
         'Минус',
         'Минус',
         'Минус',
-        'Минус',
         // 10%
-        '+1 балл',
         '+1 балл',
         '+1 балл',
         '+1 балл',
@@ -47,15 +42,12 @@ const Main = () => {
         '10 отжим./прис.',
         '10 отжим./прис.',
         '10 отжим./прис.',
-        '10 отжим./прис.',
-        // 15%
+        // 10%
         'Пол балла',
         'Пол балла',
         'Пол балла',
-        'Пол балла',
-        'Пол балла',
-        'Пол балла',
-        // 5%
+
+        // ~6.5%
         'Минус пол балла',
         'Минус пол балла',
         '5+',
@@ -114,18 +106,18 @@ const Main = () => {
         })
 
         setFullPlayersList(players)
-        readyGame()
+        // readyGame()
     }
 
-    const readyGame = () => {
-        let counterZero = 0
+    // const readyGame = () => {
+    //     let counterZero = 0
 
-        fullPlayersList.forEach(player => {
-            if(player.points === 0) {
-                counterZero++
-            }
-        })
-    }
+    //     fullPlayersList.forEach(player => {
+    //         if(player.points === 0) {
+    //             counterZero++
+    //         }
+    //     })
+    // }
 
 
     /**
